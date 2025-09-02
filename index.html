@@ -10,18 +10,27 @@
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      text-align: center;
       background: linear-gradient(to right, #f0f4f8, #e8f5e9);
       color: #333;
     }
     header {
-      padding: 4rem 2rem;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      background: #fff;
     }
-    h1 {
+    .logo img {
+      height: 60px;
+    }
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
-    p {
+    .hero p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
     }
@@ -38,20 +47,60 @@
     .btn:hover {
       background: #1b5e20;
     }
+    section {
+      padding: 3rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: center;
+    }
     footer {
       margin-top: 4rem;
       padding: 1rem;
       font-size: 0.9rem;
+      text-align: center;
       color: #666;
+      background: #fff;
+      border-top: 1px solid #ddd;
     }
   </style>
 </head>
 <body>
+  <!-- Logo / Nav -->
   <header>
+    <div class="logo">
+      <!-- Replace logo.png with your logo file -->
+      <img src="logo1.png" alt="Lontra Logo">
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
     <h1>Welcome to Lontra</h1>
     <p>Innovating the future of biomaterials.</p>
     <a href="mailto:lontrabio@gmail.com" class="btn">Contact Us</a>
-  </header>
+  </div>
+
+  <!-- About Us Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      At Lontra, we are pioneering the development of advanced biomaterials 
+      to transform healthcare and technology. Our mission is to harness nature-inspired 
+      design and cutting-edge science to create sustainable, high-performance solutions 
+      for the future.
+    </p>
+  </section>
+
+  <!-- Footer -->
   <footer>
     © 2025 Lontra Bio LLC, All rights reserved.
   </footer>
