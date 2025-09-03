@@ -21,11 +21,18 @@
     }
     
     .logo img {
-      height: 150px;
-      width: auto; 
-      display: block;
-      margin: 0 auto;
-    }
+  max-width: 300px;  /* desktop default */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* On smaller screens (phones/tablets), shrink the logo */
+@media (max-width: 600px) {
+  .logo img {
+    max-width: 180px;  /* smaller logo for mobile */
+  }
     .hero {
       padding: 4rem 2rem;
       text-align: center;
