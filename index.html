@@ -83,11 +83,23 @@
 
   <style>
 .logo img {
-  height: 120px;    /* Adjust size as needed */
-  width: auto;
+  max-height: 150px;   /* largest height on big screens */
+  width: auto;         /* maintain aspect ratio */
   display: block;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    max-height: 100px;   /* smaller on tablets/mobile */
   }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-height: 70px;    /* even smaller on small phones */
+  }
+}
 </style>
   
   <!-- Hero Section -->
