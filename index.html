@@ -175,24 +175,25 @@
  <style>
 /* Tagline Section (above footer) */
 .tagline {
-  text-align: center;          /* ensures child inline-block is centered */
+  text-align: center;       /* center content */
   padding: 60px 20px 40px;
 }
 
 .tagline p {
-  display: inline-block;       /* allows text to shrink dynamically */
-  margin: 0;
+  margin: 0 auto;           /* center the block */
   font-weight: 400;
   color: #333;
   line-height: 1.6;
-  white-space: nowrap;         /* keep on one line */
-  font-size: clamp(1rem, 2.5vw, 1.4rem); /* dynamic shrink/grow */
+  font-size: clamp(1rem, 2.5vw, 1.4rem); /* dynamically shrink */
+  max-width: 100%;          /* ensures it fits the container */
+  display: block;           /* default block for full centering */
+  white-space: nowrap;      /* keep on one line */
 }
 
 /* Optional: allow wrapping on very small screens */
 @media (max-width: 480px) {
   .tagline p {
-    white-space: normal;
+    white-space: normal;    /* allow wrap on tiny screens */
   }
 }
 </style>  
