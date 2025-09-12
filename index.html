@@ -174,7 +174,6 @@
   </style>
  <style>
 /* Tagline Section (above footer) */
-/* Tagline Section (above footer) */
 .tagline {
   text-align: center;
   padding: 60px 20px 40px;
@@ -182,27 +181,14 @@
 
 .tagline p {
   margin: 0;
-  font-size: 1.4rem;
   font-weight: 400;
   color: #333;
   line-height: 1.6;
-  white-space: nowrap;    /* keep on one line */
-  overflow: hidden;
-  text-overflow: ellipsis; /* just in case */
-}
-
-/* On smaller screens, let it shrink instead of overflowing */
-@media (max-width: 768px) {
-  .tagline p {
-    font-size: 1.1rem;   /* smaller font for tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .tagline p {
-    font-size: 1rem;     /* smaller font for phones */
-    white-space: normal; /* allow wrapping if absolutely necessary */
-  }
+  white-space: nowrap;               /* force single line */
+  overflow: hidden;                  /* hide any overflow */
+  text-overflow: ellipsis;           /* optional, in case it overflows slightly */
+  display: inline-block;
+  font-size: clamp(1rem, 2.5vw, 1.4rem); /* dynamic font size: min 1rem, max 1.4rem */
 }
 </style>  
 </head>
