@@ -175,19 +175,18 @@
  <style>
 /* Tagline Section (above footer) */
 .tagline {
-  text-align: center;       /* center the paragraph */
+  display: flex;                  /* enable flex layout */
+  justify-content: center;        /* center horizontally */
   padding: 60px 20px 40px;
 }
 
 .tagline p {
-  margin: 0 auto;
   font-weight: 400;
   color: #333;
   line-height: 1.6;
-  font-size: clamp(1rem, 2.5vw, 1.4rem); /* shrink/grow dynamically */
-  max-width: 100%;
-  display: inline-block;    /* keeps the paragraph width to its content */
-  white-space: normal;      /* allow wrapping if necessary */
+  font-size: clamp(1rem, 2.5vw, 1.4rem); /* dynamic font size */
+  max-width: fit-content;          /* shrink to content width */
+  white-space: nowrap;             /* keep it all on one line */
 }
 </style>  
 </head>
