@@ -175,26 +175,19 @@
  <style>
 /* Tagline Section (above footer) */
 .tagline {
-  text-align: center;       /* center content */
+  text-align: center;       /* center the paragraph */
   padding: 60px 20px 40px;
 }
 
 .tagline p {
-  margin: 0 auto;           /* center the block */
+  margin: 0 auto;
   font-weight: 400;
   color: #333;
   line-height: 1.6;
-  font-size: clamp(1rem, 2.5vw, 1.4rem); /* dynamically shrink */
-  max-width: 100%;          /* ensures it fits the container */
-  display: block;           /* default block for full centering */
-  white-space: nowrap;      /* keep on one line */
-}
-
-/* Optional: allow wrapping on very small screens */
-@media (max-width: 480px) {
-  .tagline p {
-    white-space: normal;    /* allow wrap on tiny screens */
-  }
+  font-size: clamp(1rem, 2.5vw, 1.4rem); /* shrink/grow dynamically */
+  max-width: 100%;
+  display: inline-block;    /* keeps the paragraph width to its content */
+  white-space: normal;      /* allow wrapping if necessary */
 }
 </style>  
 </head>
