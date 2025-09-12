@@ -27,7 +27,48 @@
   display: block;
   margin: 0 auto;
 }
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;   /* stack text vertically */
+  justify-content: center;  /* center vertically */
+  align-items: center;      /* center horizontally */
+  text-align: center;       /* center the text itself */
+  padding: 80px 20px;       /* space around the content */
+  margin: 0 auto;           /* keep it centered on the page */
+  max-width: 1000px;        /* prevent text from stretching too wide */
+}
 
+.hero h1 {
+  font-size: 2.5rem;        /* big headline */
+  margin-bottom: 20px;      /* space below */
+  color: #222;
+}
+
+.hero p {
+  font-size: 1.2rem;        /* slightly bigger text */
+  line-height: 1.6;         /* relaxed line spacing */
+  margin-bottom: 30px;      /* space before next element (like a button) */
+  color: #555;
+}
+
+.hero button,
+.hero a {
+  padding: 12px 24px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero button:hover,
+.hero a:hover {
+  background-color: #005fa3;
+}
 /* On smaller screens (phones/tablets), shrink the logo */
 @media (max-width: 600px) {
   .logo img {
