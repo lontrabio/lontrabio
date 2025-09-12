@@ -175,7 +175,7 @@
  <style>
 /* Tagline Section (above footer) */
 .tagline {
-  display: flex;                  /* enable flex layout */
+  display: flex;                  /* flex layout */
   justify-content: center;        /* center horizontally */
   padding: 60px 20px 40px;
 }
@@ -185,8 +185,8 @@
   color: #333;
   line-height: 1.6;
   font-size: clamp(1rem, 2.5vw, 1.4rem); /* dynamic font size */
-  max-width: fit-content;          /* shrink to content width */
-  white-space: nowrap;             /* keep it all on one line */
+  white-space: nowrap;             /* keep on one line */
+  min-width: 0;                     /* ensures flex item can shrink */
 }
 </style>  
 </head>
