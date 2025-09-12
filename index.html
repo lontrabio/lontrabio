@@ -6,138 +6,173 @@
   <title>Lontra</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    /* Body and base */
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to right, #e6f2ff, #cce6ff);
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Header / Logo */
-header {
-  padding: 2rem;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-  background: #fff;
-}
-
-.logo img {
-  max-width: 150px;
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #e6f2ff, #cce6ff);
+      color: #333;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      background: #fff;
+    }
+    
+    .logo img {
+  max-width: 150px;  /* desktop default */
   width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
 }
-
-@media (max-width: 600px) {
-  .logo img {
-    max-width: 70px;
-  }
-}
-
 /* Hero Section */
 .hero {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 80px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
+  flex-direction: column;   /* stack text vertically */
+  justify-content: center;  /* center vertically */
+  align-items: center;      /* center horizontally */
+  text-align: center;       /* center the text itself */
+  padding: 80px 20px;       /* space around the content */
+  margin: 0 auto;           /* keep it centered on the page */
+  max-width: 1000px;        /* prevent text from stretching too wide */
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 4vw, 2.5rem);
-  margin-bottom: 20px;
+  font-size: 2.5rem;        /* big headline */
+  margin-bottom: 20px;      /* space below */
   color: #222;
 }
 
 .hero p {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  margin-bottom: 30px;
+  font-size: 1.2rem;        /* slightly bigger text */
+  line-height: 1.6;         /* relaxed line spacing */
+  margin-bottom: 30px;      /* space before next element (like a button) */
   color: #555;
 }
 
-.hero .btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
+.hero button,
+.hero a {
+  padding: 12px 24px;
+  background-color: #0077cc;
   color: white;
-  background: #1e88e5;
-  border-radius: 8px;
+  border: none;
+  border-radius: 6px;
   text-decoration: none;
-  transition: background 0.2s;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.hero .btn:hover {
-  background: #1565c0;
+.hero button:hover,
+.hero a:hover {
+  background-color: #005fa3;
 }
-
-/* Sections (About Us, etc.) */
-section {
-  padding: 3rem 2rem;
-  max-width: 800px;
-  margin: 0 auto;
+/* On smaller screens (phones/tablets), shrink the logo */
+@media (max-width: 600px) {
+  .logo img {
+    max-width: 70px;  /* smaller logo for mobile */
+  }
 }
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      color: white;
+      background: #1e88e5;   /* Primary blue */
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #1565c0;   /* Darker blue on hover */
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+    footer {
+      margin-top: 4rem;
+      padding: 1rem;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #666;
+      background: #f9fcff;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+<style>
+    /* About Us Section */
+    .about-us {
+      background-color: #f9f9f9;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-section h2 {
-  font-size: clamp(1.8rem, 3vw, 2rem);
-  margin-bottom: 2rem;
-  text-align: center;
-}
+    .about-us h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #333;
+    }
 
-section p {
-  font-size: clamp(1rem, 2vw, 1.1rem);
-  text-align: center;
-  color: #555;
-  line-height: 1.6;
-}
+    .founders {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
 
-/* About Us Section */
-.about-us {
-  background-color: #f9f9f9;
-  padding: 60px 20px;
-  text-align: center;
-}
+    .founder {
+      flex: 1 1 300px;
+      max-width: 400px;
+    }
 
-.founders {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
+    .founder-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
 
-.founder {
-  flex: 1 1 300px;
-  max-width: 400px;
-}
+    .founder h3 {
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+      color: #222;
+    }
 
-.founder-img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.founder h3 {
-  margin-bottom: 10px;
-  font-size: 1.25rem;
-  color: #222;
-}
-
-.founder p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.5;
-}
-
+    .founder p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+    }
+  </style>
+ <style>
 /* Tagline Section (above footer) */
 .tagline {
   display: flex;                  /* flex layout */
@@ -152,17 +187,6 @@ section p {
   font-size: clamp(1rem, 2.5vw, 1.4rem); /* dynamic font size */
   white-space: nowrap;             /* keep on one line */
   min-width: 0;                     /* ensures flex item can shrink */
-}
-
-/* Footer */
-footer {
-  margin-top: 4rem;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-  text-align: center;
-  color: #666;
-  background: #f9fcff;
-  border-top: 1px solid #ddd;
 }
 
 </style>  
