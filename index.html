@@ -138,10 +138,9 @@ section p {
   line-height: 1.5;
 }
 
-/* Tagline Section */
+/* Tagline Section (above footer) */
 .tagline {
-  display: flex;
-  justify-content: center;
+  text-align: center;       /* center the paragraph */
   padding: 60px 20px 40px;
 }
 
@@ -149,12 +148,12 @@ section p {
   font-weight: 400;
   color: #333;
   line-height: 1.6;
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
-  white-space: nowrap;
-  min-width: 0;  /* ensures flex item can shrink */
+  font-size: clamp(1rem, 2.5vw, 1.4rem); /* dynamic font size */
+  white-space: nowrap;      /* keep on one line */
+  display: inline-block;    /* shrink-to-fit width for proper centering */
 }
 
-/* Allow wrapping on very small screens */
+/* On very small screens, allow wrapping */
 @media (max-width: 480px) {
   .tagline p {
     white-space: normal;
