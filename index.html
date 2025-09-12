@@ -140,8 +140,8 @@ section p {
 
 /* Tagline Section (above footer) */
 .tagline {
-  display: flex;                /* flex container */
-  justify-content: center;      /* horizontal centering */
+  display: flex;                  /* flex layout */
+  justify-content: center;        /* center horizontally */
   padding: 60px 20px 40px;
 }
 
@@ -149,11 +149,9 @@ section p {
   font-weight: 400;
   color: #333;
   line-height: 1.6;
-  font-size: clamp(1rem, 2.5vw, 1.4rem); /* dynamic shrinking */
-  max-width: 100%;              /* never overflow parent */
-  min-width: 0;                 /* allow shrinking in flex */
-  text-align: center;           /* center text inside paragraph */
-  white-space: nowrap;          /* keep single line */
+  font-size: clamp(1rem, 2.5vw, 1.4rem); /* dynamic font size */
+  white-space: nowrap;             /* keep on one line */
+  min-width: 0;                     /* ensures flex item can shrink */
 }
 
 /* Footer */
