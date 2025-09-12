@@ -173,20 +173,21 @@
     }
   </style>
  <style>
+   
 /* Tagline Section (above footer) */
 .tagline {
-  display: flex;                  /* flex layout */
-  justify-content: center;        /* center horizontally */
+  text-align: center;       /* center the paragraph itself */
   padding: 60px 20px 40px;
 }
 
 .tagline p {
+  display: inline-block;             /* shrink to content width */
   font-weight: 400;
   color: #333;
   line-height: 1.6;
   font-size: clamp(1rem, 2.5vw, 1.4rem); /* dynamic font size */
-  white-space: nowrap;             /* keep on one line */
-  min-width: 0;                     /* ensures flex item can shrink */
+  white-space: nowrap;               /* force single line */
+  margin: 0 auto;                    /* center inline-block horizontally */
 }
 
 </style>  
