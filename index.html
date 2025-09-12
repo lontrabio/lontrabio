@@ -184,11 +184,9 @@
   font-weight: 400;
   color: #333;
   line-height: 1.6;
-  white-space: nowrap;               /* force single line */
-  overflow: hidden;                  /* hide any overflow */
-  text-overflow: ellipsis;           /* optional, in case it overflows slightly */
+  white-space: nowrap;               /* keep on one line */
   display: inline-block;
-  font-size: clamp(1rem, 2.5vw, 1.4rem); /* dynamic font size: min 1rem, max 1.4rem */
+  font-size: clamp(1rem, 2.5vw, 1.4rem); /* dynamically shrink/grow */
 }
 </style>  
 </head>
